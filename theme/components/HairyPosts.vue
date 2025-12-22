@@ -17,18 +17,38 @@ const props = withDefaults(defineProps<{
 const layout = useLayoutPost()
 
 const pageSize = ref(7)
+
 const routes = usePostList({ type: props.type || '' })
+
 const posts = computed<any[]>(() => props.posts || routes.value)
 const pagePosts = computed(() => posts.value.slice((props.curPage - 1) * pageSize.value, props.curPage * pageSize.value))
+
 const displayedPosts = computed(() => props.pagination ? pagePosts.value : posts.value)
+const reverse = computed(() => layout.value.includes('reverse'))
 </script>
 
 <template>
   <div class="mt-8">
     <HairyPostToggleLayout />
     <HairyUpdatedPost v-if="updated" :posts="posts" />
-    <HairyPostImageList v-if="layout.includes('image')" :posts="displayedPosts" />
-    <HairyPostTextsList v-else :posts="displayedPosts" />
+    <ul class="divide-y divide-gray-200 dark:divide-gray-700">
+      <template v-for="post, i in displayedPosts" :key="i">
+        <template v-if="post.music">
+          <li class="mb-5 py-2 lt-sm:mb-5 lt-md:mb-6">
+            <a
+              class="text-size-2xl lt-sm:max-w-200px font-bold truncate cursor-pointer lt-sm:text-size-lg"
+              :class="[reverse ? 'order-last' : 'order-first']"
+            >
+              {{ post.title }}
+            </a>
+            {{ post.excerpt }}
+            <meting-js :id="post.music" type="song" theme="var(--hy-c-primary)" server="netease" />
+          </li>
+        </template>
+        <HairyArticleImage v-else-if="layout.includes('image')" :post="post" :reverse="reverse && !((i % 2) === 0)" />
+        <HairyArticleText v-else :post="post" />
+      </template>
+    </ul>
     <ValaxyPagination v-if="pagination" class="mb-6" :cur-page="curPage" :page-size="pageSize" :total="posts.length" />
   </div>
 </template>
