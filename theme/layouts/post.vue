@@ -43,6 +43,7 @@ function displayTag(tag: string) {
       <template #default>
         <HairyImageGlobal>
           <router-view />
+          <meting-js v-if="post.music" :id="post.music" type="song" theme="var(--hy-c-primary)" server="netease" />
         </HairyImageGlobal>
         <HairyPostFooter v-if="addonWaline.options?.pageview" />
       </template>

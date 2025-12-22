@@ -33,18 +33,7 @@ const reverse = computed(() => layout.value.includes('reverse'))
     <HairyUpdatedPost v-if="updated" :posts="posts" />
     <ul class="divide-y divide-gray-200 dark:divide-gray-700">
       <template v-for="post, i in displayedPosts" :key="i">
-        <template v-if="post.music">
-          <li class="mb-5 py-2 lt-sm:mb-5 lt-md:mb-6">
-            <a
-              class="text-size-2xl lt-sm:max-w-200px font-bold truncate cursor-pointer lt-sm:text-size-lg"
-              :class="[reverse ? 'order-last' : 'order-first']"
-            >
-              {{ post.title }}
-            </a>
-            {{ post.excerpt }}
-            <meting-js :id="post.music" type="song" theme="var(--hy-c-primary)" server="netease" />
-          </li>
-        </template>
+        <HairyArticleMusic v-if="post.music" :post="post" />
         <HairyArticleImage v-else-if="layout.includes('image')" :post="post" :reverse="reverse && !((i % 2) === 0)" />
         <HairyArticleText v-else :post="post" />
       </template>
