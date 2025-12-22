@@ -21,6 +21,7 @@ const hello = riposte(
       </template>
     </HairyNavbar>
     <HairyHeader
+      headline-border
       :headline="config.title"
       :title="config.author.name"
       :description="`${hello}, how are you doing?`"

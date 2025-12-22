@@ -4,6 +4,7 @@ import { useGlobalStore } from '../store'
 
 defineProps<{
   headline?: string
+  headlineBorder?: boolean
   title?: string
   description?: string
 }>()
@@ -14,7 +15,7 @@ const { headerRef } = storeToRefs(useGlobalStore())
 <template>
   <header ref="headerRef" class="relative min-h-30vh animate__animated animate__fadeIn">
     <div class="h-30vh lt-md:h-60vh min-h-80 flex-center">
-      <HairyHeadHero v-if="title || headline || description || $slots.description" class="relative z-2" :title="title" v-bind="$props">
+      <HairyHeadHero v-if="title || headline || description || $slots.description" class="relative z-2" :title="title" :headline-border="headlineBorder" v-bind="$props">
         <template #description>
           <slot name="description" />
         </template>

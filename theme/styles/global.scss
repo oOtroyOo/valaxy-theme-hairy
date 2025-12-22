@@ -38,3 +38,15 @@ a {
     width: 75vw
   }
 }
+
+:root {
+  --un-prose-hr: #000;
+}
+
+.dark {
+  --un-prose-hr: rgb(195, 195, 195);
+}
+
+.main {
+  min-width: 0;
+}
