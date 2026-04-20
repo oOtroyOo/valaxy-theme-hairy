@@ -16,6 +16,9 @@ export default defineConfig<ThemeConfig>({
       enable: false,
     },
   },
+  vite: {
+    base: '/valaxy-theme-hairy/',
+  },
   themeConfig: {
     theme: 'dark',
     nav: [
