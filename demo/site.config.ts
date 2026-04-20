@@ -3,7 +3,7 @@ import { defineSiteConfig } from 'valaxy'
 export default defineSiteConfig({
   lang: 'zh-CN',
   title: 'Valaxy Theme Hairy',
-  url: 'https://www.hairy.blog/',
+  url: 'https://ootroyoo.github.io/valaxy-theme-hairy/',
   author: {
     avatar: 'https://pic.imgdb.cn/item/62fe02d616f2c2beb14bc2f3.jpg',
     name: 'Valaxy Theme Hairy Preview',

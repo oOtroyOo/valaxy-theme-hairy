@@ -1,7 +1,7 @@
-import { defineConfig } from 'valaxy'
 import type { ThemeConfig } from 'valaxy-theme-hairy'
-import { addonWaline } from 'valaxy-addon-waline'
+import { defineConfig } from 'valaxy'
 import { addonMeting } from 'valaxy-addon-meting'
+import { addonWaline } from 'valaxy-addon-waline'
 
 /**
  * User Config
@@ -10,6 +10,12 @@ import { addonMeting } from 'valaxy-addon-meting'
 export default defineConfig<ThemeConfig>({
   theme: 'hairy',
 
+  modules:
+  {
+    rss: {
+      enable: false,
+    },
+  },
   themeConfig: {
     theme: 'dark',
     nav: [
