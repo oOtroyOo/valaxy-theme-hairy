@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ootroyoo.github.io/valaxy-theme-hairy/sitemap.xml
