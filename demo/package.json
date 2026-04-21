@@ -10,13 +10,13 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "valaxy": "^0.19.2",
-    "valaxy-addon-meting": "^0.2.0",
-    "valaxy-addon-waline": "^0.2.0",
+    "valaxy": "catalog:",
+    "valaxy-addon-meting": "catalog:",
+    "valaxy-addon-waline": "catalog:",
     "valaxy-theme-hairy": "workspace:*"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4",
-    "vite-plugin-inspect": "^0.7.42"
+    "nodemon": "catalog:",
+    "vite-plugin-inspect": "catalog:"
   }
 }

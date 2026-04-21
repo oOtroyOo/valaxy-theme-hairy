@@ -39,6 +39,22 @@
         "<node_internals>/**"
       ],
       "type": "node"
+    },
+    {
+      "name": "File",
+      "program": "${file}",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "PowerShell Launch Current File",
+      "type": "PowerShell",
+      "request": "launch",
+      "script": "${file}",
+      "cwd": "${cwd}"
     }
   ]
 }

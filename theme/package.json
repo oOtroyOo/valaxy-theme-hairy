@@ -1,8 +1,6 @@
 {
   "name": "valaxy-theme-hairy",
   "type": "module",
-  "version": "1.2.7",
-  "packageManager": "pnpm@8.15.8",
   "author": {
     "email": "wwu710632@gmail.com",
     "name": "Hairyf",
@@ -22,21 +20,21 @@
   "main": "client/index.ts",
   "types": "types/index.d.ts",
   "dependencies": {
-    "@docsearch/css": "^3.6.0",
-    "@iconify-json/ant-design": "^1.1.16",
-    "@iconify-json/fluent": "^1.1.59",
-    "@iconify-json/material-symbols": "^1.1.84",
-    "@iconify-json/simple-icons": "^1.1.109",
-    "@overlastic/vue": "^0.4.7",
-    "element-plus": "^2.7.7",
-    "furigana-markdown-it": "^1.0.3",
-    "pinia": "^2.1.7",
-    "swiper": "^11.1.5"
+    "@docsearch/css": "catalog:",
+    "@iconify-json/ant-design": "catalog:",
+    "@iconify-json/fluent": "catalog:",
+    "@iconify-json/material-symbols": "catalog:",
+    "@iconify-json/simple-icons": "catalog:",
+    "@overlastic/vue": "catalog:",
+    "element-plus": "catalog:",
+    "furigana-markdown-it": "catalog:",
+    "pinia": "catalog:",
+    "swiper": "catalog:"
   },
   "devDependencies": {
-    "valaxy": "^0.19.2",
-    "valaxy-addon-algolia": "^0.0.3",
-    "valaxy-addon-meting": "^0.2.0",
-    "valaxy-addon-waline": "^0.2.0"
+    "valaxy": "catalog:",
+    "valaxy-addon-algolia": "catalog:",
+    "valaxy-addon-meting": "catalog:",
+    "valaxy-addon-waline": "catalog:"
   }
 }
